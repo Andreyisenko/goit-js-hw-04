@@ -1,11 +1,15 @@
 function calcAverageCalories(days) {
   let totCal = 0;
-  const calor = Object.values(days);
+  // const calor = Object.values(days);
 
-  for (const element of calor) {
+  for (const element of days) {
     totCal += element.calories;
+    // console.log(element);
   }
-  return totCal / calor.length;
+  if (days.length === 0) {
+    return 0;
+  }
+  return totCal / days.length;
 }
 
 console.log(
